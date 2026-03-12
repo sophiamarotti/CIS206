@@ -87,7 +87,7 @@ def menu():
 
 def main():
 
-    filename = "/Users/sophiamarotti/Desktop/customers.csv"
+    filename = "customers.csv"
 
     customers = load_customers(filename)
 
