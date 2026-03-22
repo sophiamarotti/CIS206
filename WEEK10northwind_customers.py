@@ -1,16 +1,19 @@
 """
+"""
 Northwind Customers Program
 Author: Sophia Marotti
-Course: Applied Programming / Dictionaries and Sets
+Course: CIS 206 - Applied Programming
 
+Description:
 This program reads the Northwind customers CSV file and stores each
-customer as a dictionary inside a list. It provides a menu interface
-that allows the user to:
+customer as a dictionary inside a list.
 
-1. Display company name, contact name, and phone number sorted by company name
-2. Display contact name, company name, and phone number sorted by contact name
-3. Search for a company name or partial company name
-4. Search for a contact name or partial contact name
+The program allows the user to:
+1. Display customers sorted by company name
+2. Display customers sorted by contact name
+3. Search by company name (full or partial)
+4. Search by contact name (full or partial)
+"""
 
 The program avoids global variables by passing data through functions.
 It includes input validation, parameter validation, and function documentation.
