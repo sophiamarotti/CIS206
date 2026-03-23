@@ -74,7 +74,7 @@ print("\n8.")
 text8 = "The quick brown fox jumps over the lazy dog."
 words8 = ["fox", "dog", "horse"]
 for word in words8:
-    if word in text8:
+    if re.search(word, text8):
         print(word, "found")
     else:
         print(word, "not found")
@@ -83,9 +83,9 @@ for word in words8:
 print("\n9.")
 text9 = "The quick brown fox jumps over the lazy dog."
 word = "fox"
-pos = text9.find(word)
-if pos != -1:
-    print(word, "found at position", pos)
+match = re.search(word, text9)
+if match:
+    print(word, "found at position", match.start())
 else:
     print(word, "not found")
 
@@ -100,7 +100,7 @@ for s in tests10:
 
 # 11
 print("\n11.")
-url = "https://www.washingtonpost.com/news/football-insider/wp/2016/09/02/..."
+url = "https://www.washingtonpost.com/news/football-insider/wp/2016/09/02/odell-beckhams-fame-rests-on-one-stupid-little-ball-josh-norman-tells-author/"
 match = re.search(r"/(\d{4})/(\d{2})/(\d{2})/", url)
 if match:
     print("Year:", match.group(1))
@@ -109,7 +109,7 @@ if match:
 
 # 12
 print("\n12.")
-text12 = "The following example creates an ArrayList with a capacity of 50 elements."
+text12 = "The following example creates an ArrayList with a capacity of 50 elements. Four elements are then added to the ArrayList and the ArrayList is trimmed accordingly."
 words = text12.split()
 for w in words:
     if w.lower().startswith("a") or w.lower().startswith("e"):
@@ -120,9 +120,9 @@ print("\n13.")
 text13 = "Python Exercises, PHP exercises."
 print(re.sub("[ ,\\.]", ":", text13))
 
-# 14 (same as 12)
+# 14
 print("\n14.")
-text14 = "The following example creates an ArrayList with a capacity of 50 elements."
+text14 = "The following example creates an ArrayList with a capacity of 50 elements. Four elements are then added to the ArrayList and the ArrayList is trimmed accordingly."
 words = text14.split()
 for w in words:
     if w.lower().startswith("a") or w.lower().startswith("e"):
